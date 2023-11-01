@@ -1,0 +1,579 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     21231,        571]
+NotebookOptionsPosition[     19664,        538]
+NotebookOutlinePosition[     20063,        554]
+CellTagsIndexPosition[     20020,        551]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Modular Flow", "Title",
+ CellChangeTimes->{{3.9076225863098717`*^9, 
+  3.907622587779978*^9}},ExpressionUUID->"6d7c5af9-b9df-456a-8ea9-\
+85d537660ac1"],
+
+Cell[TextData[{
+ "This animation was inspired by ",
+ ButtonBox["Daniel Piker",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://mathstodon.xyz/@Danpiker"], None},
+  ButtonNote->"https://mathstodon.xyz/@Danpiker"],
+ " and ",
+ ButtonBox["Etienne Jacob",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.tumblr.com/necessary-disorder/704166394298875905/"], 
+    None},
+  ButtonNote->"https://www.tumblr.com/necessary-disorder/704166394298875905/"],
+ ". The math behind it is explained well in ",
+ ButtonBox["this post on the n-Category Caf\[EAcute]",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://golem.ph.utexas.edu/category/2014/04/the_modular_flow_on_the_\
+space.html"], None},
+  ButtonNote->
+   "https://golem.ph.utexas.edu/category/2014/04/the_modular_flow_on_the_\
+space.html"],
+ " by Simon Willerton."
+}], "Text",
+ CellChangeTimes->{{3.907622591608968*^9, 3.907622600617235*^9}, {
+  3.907622634574931*^9, 3.9076226376940317`*^9}, {3.907622671044609*^9, 
+  3.907622700859511*^9}, {3.907622748118898*^9, 
+  3.907622779830431*^9}},ExpressionUUID->"e999453d-84a2-49a3-9b89-\
+a5eac0ce8ed1"],
+
+Cell[TextData[{
+ "One way to think about what\[CloseCurlyQuote]s going on is that the the \
+group ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"G", "=", 
+    RowBox[{"{", 
+     RowBox[{"(", GridBox[{
+        {
+         SuperscriptBox["e", "t"], "0"},
+        {"0", 
+         SuperscriptBox["e", 
+          RowBox[{"-", "t"}]]}
+       }], ")"}], "}"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e856219f-2ade-45f5-8e3e-5562dfee50d6"],
+ " is acting on the plane (in the picture the plane is ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[DoubleStruckCapitalR]", "2"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "34c826bf-6e1d-4723-91dd-49380469adc1"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"t", "\[Element]", "\[DoubleStruckCapitalR]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "42782c1a-4bb6-41e6-9b2a-5762abcc718e"],
+ ", but I\[CloseCurlyQuote]m really thinking about the action on ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[DoubleStruckCapitalC]", "2"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "504650e1-d055-45b3-9c25-9fc4fcc1b57b"],
+ " when ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"t", "\[Element]", "\[DoubleStruckCapitalC]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "9b0ae3c7-2fa2-4708-a594-e204697ec847"],
+ "). This action is pretty much the simplest possible action which motivates \
+the notion of a Geometric Invariant Theory quotient (see ",
+ ButtonBox["Thomas' very nice survey",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://doi.org/10.4310/SDG.2005.v10.n1.a7"], None},
+  ButtonNote->"https://doi.org/10.4310/SDG.2005.v10.n1.a7"],
+ " [",
+ ButtonBox["arXiv version",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://doi.org/10.48550/arXiv.math/0512411"], None},
+  ButtonNote->"https://doi.org/10.48550/arXiv.math/0512411"],
+ "]): if this group acts on points of the form ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{"x", ",", "y"}], ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "bf9ddafa-1ff3-4662-aa45-bc3c730f8ce5"],
+ ", then the product ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", " ", "y"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "ca78a969-b328-4039-8d43-5c44aa8b8a80"],
+ " is conserved, so each nonzero number ",
+ Cell[BoxData[
+  FormBox["\[Lambda]", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "14573934-d7ac-4302-8ece-48be4acdeb91"],
+ " corresponds to an orbit which is just the hyperbola ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"x", " ", "y"}], "=", "\[Lambda]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "11c20297-a0f4-4c5a-a72b-3b8d1aeed8a6"],
+ ". However, there are three different orbits for which ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"x", " ", "y"}], "=", "0"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "365a2f48-4452-495e-bdff-a087f5452593"],
+ ", namely the two axes (with the origin removed) and the origin itself. \
+Unfortunately, the closures of these three orbits intersect, so the orbit \
+space is non-Hausdorff unless we do something slightly more sophisticated. In \
+GIT, the upshot is to identify the three orbits and then the quotient is just \
+a copy of the line (i.e., ",
+ Cell[BoxData[
+  FormBox["\[DoubleStruckCapitalC]", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "14de9d4c-b184-4457-9dff-3c71f883a783"],
+ " in the complex case). We can also projectivize and think of a ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[DoubleStruckCapitalC]", "\[Cross]"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "19727cff-c6bc-45f9-b343-542cd90c888d"],
+ " action on ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[DoubleStruckCapitalC]\[DoubleStruckCapitalP]", "2"], 
+   TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "d76ec60c-69aa-4236-a748-b9d26d77d625"],
+ ", with GIT quotient isomorphic to ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[DoubleStruckCapitalC]\[DoubleStruckCapitalP]", "1"], 
+   TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e11a11f1-50e1-4ed4-a092-a706ca0c6b81"],
+ ", as in ",
+ ButtonBox["this talk",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://slides.com/shonk/cvg23"], None},
+  ButtonNote->"https://slides.com/shonk/cvg23"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.907690718513647*^9, 3.907690777737938*^9}, {
+  3.9076908190162086`*^9, 3.907690980430152*^9}, {3.907691034623542*^9, 
+  3.907691039788431*^9}, {3.907691078963431*^9, 3.907691186958424*^9}, {
+  3.9076912474881773`*^9, 3.9076914528585167`*^9}, {3.9076915088472443`*^9, 
+  3.907691595345365*^9}, {3.9076916782157087`*^9, 
+  3.907691682162375*^9}},ExpressionUUID->"848196dd-77a9-4df7-a193-\
+050f06d62248"],
+
+Cell[TextData[{
+ "However, there\[CloseCurlyQuote]s rather more going on here. If we think of \
+a lattice ",
+ Cell[BoxData[
+  FormBox["\[CapitalLambda]", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "86fe8acc-466b-4fdf-ba05-5aebcea4c740"],
+ " in the plane ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[DoubleStruckCapitalR]", "2"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "f0123271-a66b-4f35-9b17-7743e9209ddd"],
+ ", then we can think of ",
+ Cell[BoxData[
+  FormBox["G", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "f72d1888-a155-4c35-ad4a-3d0935653fc5"],
+ " as acting on ",
+ Cell[BoxData[
+  FormBox["\[CapitalLambda]", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "ec629154-e564-483c-9d34-ccbdb4b92ca1"],
+ ". Of course, this will generally change the lattice, but if we choose the \
+lattice very carefully, we can get a ",
+ StyleBox["periodic",
+  FontSlant->"Italic"],
+ " action: after some finite ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["t", "0"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "8ee79a8b-0328-4f3d-a26a-505ad62b60f8"],
+ ", the lattice comes back to itself (even though the individual points have \
+of course moved). That is the modular flow, and getting the lattice right is \
+the hard part of the visualization."
+}], "Text",
+ CellChangeTimes->{{3.907691621259659*^9, 
+  3.907691816546047*^9}},ExpressionUUID->"bb1e2ed4-d1f7-4270-b815-\
+c6c210efdb6f"],
+
+Cell[TextData[{
+ "First, we grab a good color palette developed by ",
+ ButtonBox["Peter Kovesi",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://colorcet.com"], None},
+  ButtonNote->"https://colorcet.com"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.907691818988058*^9, 3.907691828813035*^9}, {
+  3.9076919306554117`*^9, 
+  3.907691943153666*^9}},ExpressionUUID->"f164d21c-19e5-4c91-8703-\
+ba3dbfec0f50"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"names", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+      "\"\<../colors/CETperceptual_csv_0_1.zip\>\""}], ",", 
+     "\"\<FileNames\>\""}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"cols", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+      "\"\<../colors/CETperceptual_csv_0_1.zip\>\""}], ",", "\"\<*\>\""}], 
+    "]"}]}], ";"}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.879000649090803*^9, 3.879000692875391*^9}, 
+   3.879246158222321*^9, 3.879246189288507*^9, {3.879522037884914*^9, 
+   3.879522042417652*^9}, {3.907622105611874*^9, 3.907622109977394*^9}},
+ CellLabel->"In[69]:=",ExpressionUUID->"25b953c5-d5e2-4a0a-83f7-345593ee8245"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"P", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", 
+       RowBox[{"-", 
+        SqrtBox["2"]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", 
+       RowBox[{"-", 
+        SqrtBox["2"]}]}], "}"}]}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ct", "[", 
+    RowBox[{"{", 
+     RowBox[{"x_", ",", "y_"}], "}"}], "]"}], ":=", 
+   RowBox[{
+    FractionBox["1", "2"], 
+    RowBox[{"Log", "[", 
+     FractionBox[
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["x", "2"], "-", 
+        RowBox[{"2", " ", 
+         SqrtBox["2"], " ", "x", " ", "y"}], "+", 
+        RowBox[{"2", " ", 
+         SuperscriptBox["y", "2"]}]}]], 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["x", "2"], "+", 
+        RowBox[{"2", " ", 
+         SqrtBox["2"], " ", "x", " ", "y"}], "+", 
+        RowBox[{"2", " ", 
+         SuperscriptBox["y", "2"]}]}]]], "]"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"pts", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"x", ",", "y"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", 
+           RowBox[{"-", "30"}], ",", "30"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"y", ",", 
+           RowBox[{"-", "30"}], ",", "30"}], "}"}]}], "]"}], ",", "1"}], 
+      "]"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Abs", "[", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"DiagonalMatrix", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              SuperscriptBox["E", 
+               RowBox[{"ct", "[", "#", "]"}]], ",", 
+              SuperscriptBox["E", 
+               RowBox[{"-", 
+                RowBox[{"ct", "[", "#", "]"}]}]]}], "}"}], "]"}], ".", "P", 
+           ".", "#"}], ")"}], "[", 
+         RowBox[{"[", "1", "]"}], "]"}], "]"}], "<=", "10.5"}], "&"}]}], 
+    "]"}]}], ";"}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.907622035121217*^9, 3.907622036531605*^9}, 
+   3.907622121506646*^9},
+ CellLabel->"In[65]:=",ExpressionUUID->"54f81b06-021e-4341-868d-8ded93f0b264"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"sort", "=", 
+   RowBox[{"DeleteDuplicates", "[", 
+    RowBox[{"SortBy", "[", 
+     RowBox[{"pts", ",", 
+      RowBox[{
+       RowBox[{"Abs", "[", 
+        RowBox[{
+         RowBox[{"N", "[", 
+          RowBox[{"(", 
+           RowBox[{"P", ".", "#"}], ")"}], "]"}], "[", 
+         RowBox[{"[", "2", "]"}], "]"}], "]"}], "&"}]}], "]"}], "]"}]}], 
+  ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.88132437728759*^9, 3.8813244718284187`*^9}, {
+   3.881324530482936*^9, 3.881324532319232*^9}, {3.881324610094626*^9, 
+   3.881324611866743*^9}, {3.881324653158703*^9, 3.881324698877598*^9}, {
+   3.8813247876210546`*^9, 3.881324835451524*^9}, {3.881324961900312*^9, 
+   3.88132496847062*^9}, 3.881325371287274*^9, {3.881325423622467*^9, 
+   3.881325424623107*^9}, {3.881325469654133*^9, 3.8813254846294823`*^9}, {
+   3.88132556067043*^9, 3.881325592398127*^9}, 3.907622189403357*^9},
+ CellLabel->"In[71]:=",ExpressionUUID->"0d39cdd7-387c-4c75-8ae9-448ca66466b7"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"orbits", "=", 
+   RowBox[{"Gather", "[", 
+    RowBox[{"pts", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Norm", "[", 
+        RowBox[{
+         RowBox[{"N", "[", 
+          RowBox[{
+           RowBox[{"DiagonalMatrix", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              SuperscriptBox["E", 
+               RowBox[{"ct", "[", "#1", "]"}]], ",", 
+              SuperscriptBox["E", 
+               RowBox[{"-", 
+                RowBox[{"ct", "[", "#1", "]"}]}]]}], "}"}], "]"}], ".", "P", 
+           ".", "#1"}], "]"}], "-", 
+         RowBox[{"N", "[", 
+          RowBox[{
+           RowBox[{"DiagonalMatrix", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              SuperscriptBox["E", 
+               RowBox[{"ct", "[", "#2", "]"}]], ",", 
+              SuperscriptBox["E", 
+               RowBox[{"-", 
+                RowBox[{"ct", "[", "#2", "]"}]}]]}], "}"}], "]"}], ".", "P", 
+           ".", "#2"}], "]"}]}], "]"}], "<", 
+       SuperscriptBox["10", 
+        RowBox[{"-", "8"}]]}], "&"}]}], "]"}]}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.88125026719291*^9, 3.881250268993226*^9}, {
+   3.881250301461585*^9, 3.881250330575508*^9}, {3.881250448858199*^9, 
+   3.881250456126152*^9}, {3.881250524978077*^9, 3.881250525522028*^9}, {
+   3.8812514055631742`*^9, 3.881251442123801*^9}, {3.881251521012451*^9, 
+   3.881251571521201*^9}, {3.881251717248787*^9, 3.8812517763171988`*^9}, 
+   3.9076219886353197`*^9},
+ CellLabel->"In[68]:=",ExpressionUUID->"bc61e88e-1f18-4827-a731-25cac118db7e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"flow", "=", 
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"n", "=", 
+        RowBox[{"Length", "[", "orbits", "]"}]}], ",", 
+       RowBox[{"cols", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Append", "[", 
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], ",", 
+            RowBox[{"#", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "&"}], "/@", 
+         RowBox[{
+          RowBox[{"ColorMapSuite", "[", "\"\<oslo\>\"", "]"}], "[", 
+          RowBox[{"[", 
+           RowBox[{"1", ",", "1"}], "]"}], "]"}]}]}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"ParallelTable", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Show", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Table", "[", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"ParametricPlot", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"DiagonalMatrix", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   SuperscriptBox["E", "s"], ",", 
+                   SuperscriptBox["E", 
+                    RowBox[{"-", "s"}]]}], "}"}], "]"}], ".", "P", ".", 
+                RowBox[{
+                 RowBox[{"Append", "[", 
+                  RowBox[{"sort", ",", 
+                   RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}]}], "]"}], "[", 
+                 RowBox[{"[", "i", "]"}], "]"}]}], ",", 
+               RowBox[{"{", 
+                RowBox[{"s", ",", 
+                 RowBox[{"t", "-", ".5"}], ",", "t"}], "}"}], ",", 
+               RowBox[{"PlotRange", "->", "10"}], ",", 
+               RowBox[{"ColorFunction", "\[Rule]", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"Blend", "[", 
+                   RowBox[{"cols", ",", 
+                    RowBox[{"2", 
+                    RowBox[{"(", 
+                    RowBox[{"#3", "-", "t", "+", ".5"}], ")"}]}]}], "]"}], 
+                  "&"}], ")"}]}], ",", 
+               RowBox[{"ColorFunctionScaling", "\[Rule]", "False"}], ",", 
+               RowBox[{"Axes", "->", "False"}], ",", 
+               RowBox[{"PlotStyle", "\[Rule]", 
+                RowBox[{"Directive", "[", 
+                 RowBox[{
+                  RowBox[{"Thickness", "[", ".02", "]"}], ",", 
+                  RowBox[{"CapForm", "[", "\"\<Round\>\"", "]"}]}], "]"}]}]}],
+               "]"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", "1", ",", 
+               RowBox[{
+                RowBox[{"Length", "[", "pts", "]"}], "+", "1"}]}], "}"}]}], 
+            "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"ImageSize", "\[Rule]", "270"}], ",", 
+           RowBox[{"Background", "\[Rule]", 
+            RowBox[{"cols", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", 
+               RowBox[{";;", 
+                RowBox[{"-", "2"}]}]}], "]"}], "]"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{"t", ",", "0.", ",", 
+           RowBox[{
+            RowBox[{"2", 
+             RowBox[{"Log", "[", 
+              RowBox[{"1", "+", 
+               SqrtBox["2"]}], "]"}]}], "-", "#"}], ",", "#"}], "}"}]}], 
+        "]"}], "&"}], "[", 
+      RowBox[{"2", 
+       FractionBox[
+        RowBox[{"Log", "[", 
+         RowBox[{"1", "+", 
+          SqrtBox["2"]}], "]"}], "70."]}], "]"}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.8813273811228447`*^9, 3.881327450070965*^9}, {
+  3.907622140943783*^9, 3.907622141241637*^9}, {3.907622210941181*^9, 
+  3.907622272691012*^9}},ExpressionUUID->"5fc43715-1e1f-4372-9f72-\
+c6fc3cf4a76e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+    "\"\<../images/flow.gif\>\""}], ",", "flow", ",", 
+   RowBox[{"\"\<AnimationRepetitions\>\"", "->", "Infinity"}], ",", 
+   RowBox[{"\"\<DisplayDurations\>\"", "->", 
+    RowBox[{"1", "/", "50"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.881242601713378*^9, 3.881242622833569*^9}, {
+  3.881245356535289*^9, 3.8812453589639893`*^9}, {3.881252769213448*^9, 
+  3.8812527716117687`*^9}, {3.8812544711419697`*^9, 3.881254473483364*^9}, {
+  3.881254975638689*^9, 3.8812549775663157`*^9}, {3.8812550196195593`*^9, 
+  3.8812550218911743`*^9}, {3.881255915040683*^9, 3.881255917539617*^9}, {
+  3.881257043492899*^9, 3.881257045679064*^9}, {3.881257825147398*^9, 
+  3.881257827668778*^9}, {3.881258193744356*^9, 3.881258195903871*^9}, {
+  3.88125901589303*^9, 3.881259019851747*^9}, {3.881325664096943*^9, 
+  3.881325666044491*^9}, {3.88132742906355*^9, 3.8813274571750317`*^9}, {
+  3.907622144252721*^9, 3.907622146607358*^9}, {3.907622288415255*^9, 
+  3.907622289677395*^9}},
+ CellLabel->"In[74]:=",ExpressionUUID->"f00b0bcc-30fd-4b99-ba8e-b8cec2376bdd"],
+
+Cell[BoxData["\<\"/Users/shonk/Dropbox/Chord \
+Length/animations/source/../images/flow.gif\"\>"], "Output",
+ CellChangeTimes->{3.9076223426373453`*^9},
+ CellLabel->"Out[74]=",ExpressionUUID->"eda239a8-33e0-46f8-9869-149c613ee244"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1155, 1089},
+WindowMargins->{{572, Automatic}, {Automatic, 60}},
+FrontEndVersion->"13.2 for Mac OS X ARM (64-bit) (January 30, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"74dfbfef-eda1-4a0c-8fe8-4d869fcd5d73"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 157, 3, 98, "Title",ExpressionUUID->"6d7c5af9-b9df-456a-8ea9-85d537660ac1"],
+Cell[740, 27, 1126, 29, 35, "Text",ExpressionUUID->"e999453d-84a2-49a3-9b89-a5eac0ce8ed1"],
+Cell[1869, 58, 4887, 128, 195, "Text",ExpressionUUID->"848196dd-77a9-4df7-a193-050f06d62248"],
+Cell[6759, 188, 1498, 39, 81, "Text",ExpressionUUID->"bb1e2ed4-d1f7-4270-b815-c6c210efdb6f"],
+Cell[8260, 229, 411, 12, 35, "Text",ExpressionUUID->"f164d21c-19e5-4c91-8703-ba3dbfec0f50"],
+Cell[8674, 243, 834, 21, 68, "Input",ExpressionUUID->"25b953c5-d5e2-4a0a-83f7-345593ee8245",
+ InitializationCell->True],
+Cell[9511, 266, 2248, 74, 146, "Input",ExpressionUUID->"54f81b06-021e-4341-868d-8ded93f0b264",
+ InitializationCell->True],
+Cell[11762, 342, 1010, 22, 46, "Input",ExpressionUUID->"0d39cdd7-387c-4c75-8ae9-448ca66466b7",
+ InitializationCell->True],
+Cell[12775, 366, 1587, 40, 49, "Input",ExpressionUUID->"bc61e88e-1f18-4827-a731-25cac118db7e",
+ InitializationCell->True],
+Cell[14365, 408, 3848, 97, 304, "Input",ExpressionUUID->"5fc43715-1e1f-4372-9f72-c6fc3cf4a76e"],
+Cell[CellGroupData[{
+Cell[18238, 509, 1165, 20, 30, "Input",ExpressionUUID->"f00b0bcc-30fd-4b99-ba8e-b8cec2376bdd"],
+Cell[19406, 531, 230, 3, 34, "Output",ExpressionUUID->"eda239a8-33e0-46f8-9869-149c613ee244"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
