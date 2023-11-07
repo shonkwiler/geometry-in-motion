@@ -5,15 +5,18 @@
 
 (* CreatedBy='Mathematica 13.2' *)
 
+(* If you do not have Mathematica installed, please either install the free Wolfram Player from https://www.wolfram.com/player/ or view this notebook on the Wolfram Community: https://community.wolfram.com/groups/-/m/t/3061781)
+
+
 (*CacheID: 234*)
 (* Internal cache information:
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     21231,        571]
-NotebookOptionsPosition[     19664,        538]
-NotebookOutlinePosition[     20063,        554]
-CellTagsIndexPosition[     20020,        551]
+NotebookDataLength[     24946,        671]
+NotebookOptionsPosition[     22880,        635]
+NotebookOutlinePosition[     23279,        651]
+CellTagsIndexPosition[     23236,        648]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -24,6 +27,34 @@ Cell["Modular Flow", "Title",
  CellChangeTimes->{{3.9076225863098717`*^9, 
   3.907622587779978*^9}},ExpressionUUID->"6d7c5af9-b9df-456a-8ea9-\
 85d537660ac1"],
+
+Cell[TextData[{
+ "\[LongDash] ",
+ ButtonBox["Clayton Shonkwiler",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://shonkwiler.org"], None},
+  ButtonNote->"https://shonkwiler.org"]
+}], "Text",
+ CellChangeTimes->{{3.908380186925302*^9, 3.90838023131973*^9}, {
+  3.908380272210742*^9, 
+  3.9083802722109013`*^9}},ExpressionUUID->"86907579-b9da-4b54-abe9-\
+1e15819bf6b2"],
+
+Cell[TextData[{
+ "Originally created December, 2022, updated November, 2023. Supported by NSF \
+",
+ ButtonBox["DMS\[Dash]2107700",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.nsf.gov/awardsearch/showAward?AWD_ID=2107700"], None},
+  ButtonNote->"https://www.nsf.gov/awardsearch/showAward?AWD_ID=2107700"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.9083802333268843`*^9, 3.9083802392154703`*^9}, {
+  3.908380279941087*^9, 
+  3.9083803179210052`*^9}},ExpressionUUID->"f0e668b0-b986-4014-aa5f-\
+5c1fc3cbd543"],
 
 Cell[TextData[{
  "This animation was inspired by ",
@@ -40,7 +71,24 @@ Cell[TextData[{
     None},
   ButtonNote->"https://www.tumblr.com/necessary-disorder/704166394298875905/"],
  ". The math behind it is explained well in ",
- ButtonBox["this post on the n-Category Caf\[EAcute]",
+ ButtonBox["this post on the ",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://golem.ph.utexas.edu/category/2014/04/the_modular_flow_on_the_\
+space.html"], None},
+  ButtonNote->
+   "https://golem.ph.utexas.edu/category/2014/04/the_modular_flow_on_the_\
+space.html"],
+ StyleBox[ButtonBox["n",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://golem.ph.utexas.edu/category/2014/04/the_modular_flow_on_the_\
+space.html"], None},
+  ButtonNote->
+   "https://golem.ph.utexas.edu/category/2014/04/the_modular_flow_on_the_\
+space.html"],
+  FontSlant->"Italic"],
+ ButtonBox["-Category Caf\[EAcute]",
   BaseStyle->"Hyperlink",
   ButtonData->{
     URL["https://golem.ph.utexas.edu/category/2014/04/the_modular_flow_on_the_\
@@ -69,33 +117,28 @@ group ",
         {"0", 
          SuperscriptBox["e", 
           RowBox[{"-", "t"}]]}
-       }], ")"}], "}"}]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+       }], ")"}], "}"}]}], TraditionalForm]],ExpressionUUID->
   "e856219f-2ade-45f5-8e3e-5562dfee50d6"],
  " is acting on the plane (in the picture the plane is ",
  Cell[BoxData[
   FormBox[
    SuperscriptBox["\[DoubleStruckCapitalR]", "2"], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "34c826bf-6e1d-4723-91dd-49380469adc1"],
+  ExpressionUUID->"34c826bf-6e1d-4723-91dd-49380469adc1"],
  " and ",
  Cell[BoxData[
   FormBox[
    RowBox[{"t", "\[Element]", "\[DoubleStruckCapitalR]"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "42782c1a-4bb6-41e6-9b2a-5762abcc718e"],
+  ExpressionUUID->"42782c1a-4bb6-41e6-9b2a-5762abcc718e"],
  ", but I\[CloseCurlyQuote]m really thinking about the action on ",
  Cell[BoxData[
   FormBox[
    SuperscriptBox["\[DoubleStruckCapitalC]", "2"], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "504650e1-d055-45b3-9c25-9fc4fcc1b57b"],
+  ExpressionUUID->"504650e1-d055-45b3-9c25-9fc4fcc1b57b"],
  " when ",
  Cell[BoxData[
   FormBox[
    RowBox[{"t", "\[Element]", "\[DoubleStruckCapitalC]"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "9b0ae3c7-2fa2-4708-a594-e204697ec847"],
+  ExpressionUUID->"9b0ae3c7-2fa2-4708-a594-e204697ec847"],
  "). This action is pretty much the simplest possible action which motivates \
 the notion of a Geometric Invariant Theory quotient (see ",
  ButtonBox["Thomas' very nice survey",
@@ -113,33 +156,28 @@ the notion of a Geometric Invariant Theory quotient (see ",
  Cell[BoxData[
   FormBox[
    RowBox[{"(", 
-    RowBox[{"x", ",", "y"}], ")"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    RowBox[{"x", ",", "y"}], ")"}], TraditionalForm]],ExpressionUUID->
   "bf9ddafa-1ff3-4662-aa45-bc3c730f8ce5"],
  ", then the product ",
  Cell[BoxData[
   FormBox[
-   RowBox[{"x", " ", "y"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   RowBox[{"x", " ", "y"}], TraditionalForm]],ExpressionUUID->
   "ca78a969-b328-4039-8d43-5c44aa8b8a80"],
  " is conserved, so each nonzero number ",
  Cell[BoxData[
-  FormBox["\[Lambda]", TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+  FormBox["\[Lambda]", TraditionalForm]],ExpressionUUID->
   "14573934-d7ac-4302-8ece-48be4acdeb91"],
  " corresponds to an orbit which is just the hyperbola ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     RowBox[{"x", " ", "y"}], "=", "\[Lambda]"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "11c20297-a0f4-4c5a-a72b-3b8d1aeed8a6"],
+  ExpressionUUID->"11c20297-a0f4-4c5a-a72b-3b8d1aeed8a6"],
  ". However, there are three different orbits for which ",
  Cell[BoxData[
   FormBox[
    RowBox[{
-    RowBox[{"x", " ", "y"}], "=", "0"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    RowBox[{"x", " ", "y"}], "=", "0"}], TraditionalForm]],ExpressionUUID->
   "365a2f48-4452-495e-bdff-a087f5452593"],
  ", namely the two axes (with the origin removed) and the origin itself. \
 Unfortunately, the closures of these three orbits intersect, so the orbit \
@@ -147,29 +185,23 @@ space is non-Hausdorff unless we do something slightly more sophisticated. In \
 GIT, the upshot is to identify the three orbits and then the quotient is just \
 a copy of the line (i.e., ",
  Cell[BoxData[
-  FormBox["\[DoubleStruckCapitalC]", TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+  FormBox["\[DoubleStruckCapitalC]", TraditionalForm]],ExpressionUUID->
   "14de9d4c-b184-4457-9dff-3c71f883a783"],
  " in the complex case). We can also projectivize and think of a ",
  Cell[BoxData[
   FormBox[
    SuperscriptBox["\[DoubleStruckCapitalC]", "\[Cross]"], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "19727cff-c6bc-45f9-b343-542cd90c888d"],
+  ExpressionUUID->"19727cff-c6bc-45f9-b343-542cd90c888d"],
  " action on ",
  Cell[BoxData[
   FormBox[
    SuperscriptBox["\[DoubleStruckCapitalC]\[DoubleStruckCapitalP]", "2"], 
-   TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "d76ec60c-69aa-4236-a748-b9d26d77d625"],
+   TraditionalForm]],ExpressionUUID->"d76ec60c-69aa-4236-a748-b9d26d77d625"],
  ", with GIT quotient isomorphic to ",
  Cell[BoxData[
   FormBox[
    SuperscriptBox["\[DoubleStruckCapitalC]\[DoubleStruckCapitalP]", "1"], 
-   TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "e11a11f1-50e1-4ed4-a092-a706ca0c6b81"],
+   TraditionalForm]],ExpressionUUID->"e11a11f1-50e1-4ed4-a092-a706ca0c6b81"],
  ", as in ",
  ButtonBox["this talk",
   BaseStyle->"Hyperlink",
@@ -229,40 +261,116 @@ c6c210efdb6f"],
 
 Cell[TextData[{
  "First, we grab a good color palette developed by ",
- ButtonBox["Peter Kovesi",
+ ButtonBox["Fabio Crameri",
   BaseStyle->"Hyperlink",
   ButtonData->{
-    URL["https://colorcet.com"], None},
-  ButtonNote->"https://colorcet.com"],
+    URL["https://www.fabiocrameri.ch/colourmaps/"], None},
+  ButtonNote->"https://www.fabiocrameri.ch/colourmaps/"],
  ":"
 }], "Text",
  CellChangeTimes->{{3.907691818988058*^9, 3.907691828813035*^9}, {
-  3.9076919306554117`*^9, 
-  3.907691943153666*^9}},ExpressionUUID->"f164d21c-19e5-4c91-8703-\
+  3.9076919306554117`*^9, 3.907691943153666*^9}, {3.9083805134343767`*^9, 
+  3.908380528276678*^9}},ExpressionUUID->"f164d21c-19e5-4c91-8703-\
 ba3dbfec0f50"],
 
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"names", "=", 
-   RowBox[{"Import", "[", 
-    RowBox[{
-     RowBox[{
-      RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-      "\"\<../colors/CETperceptual_csv_0_1.zip\>\""}], ",", 
-     "\"\<FileNames\>\""}], "]"}]}], ";"}], "\n", 
+  RowBox[{"ColorMapSuitePath", "=", 
+   RowBox[{
+    RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+    "\"\<../colors/ScientificColourMaps7\>\""}]}], ";"}], "\n", 
  RowBox[{
-  RowBox[{"cols", "=", 
-   RowBox[{"Import", "[", 
+  RowBox[{"ColorMapSuite", "[", "name_String", "]"}], ":=", 
+  RowBox[{"ColorMapSuite", "[", 
+   RowBox[{"name", ",", 
+    RowBox[{"-", "1"}]}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"ColorMapSuite", "[", 
+   RowBox[{"name_String", ",", "el_"}], "]"}], ":=", 
+  RowBox[{"With", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"list", "=", 
+      RowBox[{"Transpose", "@", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Subdivide", "[", 
+          RowBox[{"0", ",", "1", ",", "255"}], "]"}], ",", 
+         RowBox[{"RGBColor", "@@@", 
+          RowBox[{"First", "@", 
+           RowBox[{"Import", "[", 
+            RowBox[{
+            "ColorMapSuitePath", "<>", "\"\</\>\"", "<>", "name", "<>", 
+             "\"\</\>\"", "<>", "name", "<>", "\"\<.mat\>\""}], "]"}]}]}]}], 
+        "}"}]}]}], "}"}], ",", 
     RowBox[{
-     RowBox[{
-      RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-      "\"\<../colors/CETperceptual_csv_0_1.zip\>\""}], ",", "\"\<*\>\""}], 
-    "]"}]}], ";"}]}], "Input",
+     RowBox[{"Blend", "[", 
+      RowBox[{"list", ",", 
+       RowBox[{
+        RowBox[{"{", "##", "}"}], "[", 
+        RowBox[{"[", "el", "]"}], "]"}]}], "]"}], "&"}]}], "]"}]}]}], "Input",\
+
  InitializationCell->True,
- CellChangeTimes->{{3.879000649090803*^9, 3.879000692875391*^9}, 
-   3.879246158222321*^9, 3.879246189288507*^9, {3.879522037884914*^9, 
-   3.879522042417652*^9}, {3.907622105611874*^9, 3.907622109977394*^9}},
- CellLabel->"In[69]:=",ExpressionUUID->"25b953c5-d5e2-4a0a-83f7-345593ee8245"],
+ CellChangeTimes->{{3.8793607266917753`*^9, 3.879360765230769*^9}, 
+   3.879361004500042*^9, {3.879521905797346*^9, 3.879521905920217*^9}, {
+   3.879521981418963*^9, 3.879521985591873*^9}, {3.908379151980249*^9, 
+   3.908379152686006*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"50cfb30e-1d7d-41e1-a275-4edeb50e3261"],
+
+Cell[TextData[{
+ "Now, our lattice will be points of the form ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"P", "(", GridBox[{
+      {"x"},
+      {"y"}
+     }], ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "74a7c250-ad56-4601-bad0-4febf5e6e2c0"],
+ ", where ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"P", "=", 
+    RowBox[{"(", GridBox[{
+       {
+        RowBox[{"-", "1"}], 
+        RowBox[{"-", 
+         SqrtBox["2"]}]},
+       {"1", 
+        RowBox[{"-", 
+         SqrtBox["2"]}]}
+      }], ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "787e47df-5650-4e66-a337-376998cd5cb1"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"(", GridBox[{
+       {"x"},
+       {"y"}
+      }], ")"}], "\[Element]", 
+    SuperscriptBox["\[DoubleStruckCapitalZ]", "2"]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "75537fce-25a2-45c6-819a-f5c1c40bbb31"],
+ " is an integer point in the plane. Our final view will be the square ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      RowBox[{"-", "10"}], ",", "10"}], "]"}], "2"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "d1de200c-6f22-446a-923c-30bb1fcc9ed2"],
+ ", so we need to keep track of all the points that will enter that square at \
+some point in the animation, which is what ",
+ StyleBox["pts", "Input"],
+ " is doing."
+}], "Text",
+ CellChangeTimes->{{3.9083773066062*^9, 3.9083773721333523`*^9}, {
+  3.908377404280396*^9, 
+  3.9083775788042088`*^9}},ExpressionUUID->"9b5b01a1-ef0e-46ad-b255-\
+bd7a3b52d286"],
 
 Cell[BoxData[{
  RowBox[{
@@ -338,7 +446,16 @@ Cell[BoxData[{
  InitializationCell->True,
  CellChangeTimes->{{3.907622035121217*^9, 3.907622036531605*^9}, 
    3.907622121506646*^9},
- CellLabel->"In[65]:=",ExpressionUUID->"54f81b06-021e-4341-868d-8ded93f0b264"],
+ CellLabel->"In[17]:=",ExpressionUUID->"54f81b06-021e-4341-868d-8ded93f0b264"],
+
+Cell["\<\
+In the final animation, the points have tails on them. Since the tails will \
+overlap other points, we need to sort the points appropriately to make sure \
+that the points are layered in an appropriate way.\
+\>", "Text",
+ CellChangeTimes->{{3.908377586288991*^9, 
+  3.908377647040339*^9}},ExpressionUUID->"148aceb5-0879-4536-a0ed-\
+87807fc9c668"],
 
 Cell[BoxData[
  RowBox[{
@@ -362,49 +479,12 @@ Cell[BoxData[
    3.88132496847062*^9}, 3.881325371287274*^9, {3.881325423622467*^9, 
    3.881325424623107*^9}, {3.881325469654133*^9, 3.8813254846294823`*^9}, {
    3.88132556067043*^9, 3.881325592398127*^9}, 3.907622189403357*^9},
- CellLabel->"In[71]:=",ExpressionUUID->"0d39cdd7-387c-4c75-8ae9-448ca66466b7"],
+ CellLabel->"In[20]:=",ExpressionUUID->"0d39cdd7-387c-4c75-8ae9-448ca66466b7"],
 
-Cell[BoxData[
- RowBox[{
-  RowBox[{"orbits", "=", 
-   RowBox[{"Gather", "[", 
-    RowBox[{"pts", ",", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"Norm", "[", 
-        RowBox[{
-         RowBox[{"N", "[", 
-          RowBox[{
-           RowBox[{"DiagonalMatrix", "[", 
-            RowBox[{"{", 
-             RowBox[{
-              SuperscriptBox["E", 
-               RowBox[{"ct", "[", "#1", "]"}]], ",", 
-              SuperscriptBox["E", 
-               RowBox[{"-", 
-                RowBox[{"ct", "[", "#1", "]"}]}]]}], "}"}], "]"}], ".", "P", 
-           ".", "#1"}], "]"}], "-", 
-         RowBox[{"N", "[", 
-          RowBox[{
-           RowBox[{"DiagonalMatrix", "[", 
-            RowBox[{"{", 
-             RowBox[{
-              SuperscriptBox["E", 
-               RowBox[{"ct", "[", "#2", "]"}]], ",", 
-              SuperscriptBox["E", 
-               RowBox[{"-", 
-                RowBox[{"ct", "[", "#2", "]"}]}]]}], "}"}], "]"}], ".", "P", 
-           ".", "#2"}], "]"}]}], "]"}], "<", 
-       SuperscriptBox["10", 
-        RowBox[{"-", "8"}]]}], "&"}]}], "]"}]}], ";"}]], "Input",
- InitializationCell->True,
- CellChangeTimes->{{3.88125026719291*^9, 3.881250268993226*^9}, {
-   3.881250301461585*^9, 3.881250330575508*^9}, {3.881250448858199*^9, 
-   3.881250456126152*^9}, {3.881250524978077*^9, 3.881250525522028*^9}, {
-   3.8812514055631742`*^9, 3.881251442123801*^9}, {3.881251521012451*^9, 
-   3.881251571521201*^9}, {3.881251717248787*^9, 3.8812517763171988`*^9}, 
-   3.9076219886353197`*^9},
- CellLabel->"In[68]:=",ExpressionUUID->"bc61e88e-1f18-4827-a731-25cac118db7e"],
+Cell["Now we build the table of frames in the animation:", "Text",
+ CellChangeTimes->{{3.908380101152602*^9, 
+  3.9083801079635677`*^9}},ExpressionUUID->"11a6f243-aea1-4a5e-9806-\
+5331fcf9bfb6"],
 
 Cell[BoxData[
  RowBox[{
@@ -412,22 +492,19 @@ Cell[BoxData[
    RowBox[{"With", "[", 
     RowBox[{
      RowBox[{"{", 
-      RowBox[{
-       RowBox[{"n", "=", 
-        RowBox[{"Length", "[", "orbits", "]"}]}], ",", 
-       RowBox[{"cols", "=", 
+      RowBox[{"cols", "=", 
+       RowBox[{
         RowBox[{
-         RowBox[{
-          RowBox[{"Append", "[", 
-           RowBox[{
-            RowBox[{"#", "[", 
-             RowBox[{"[", "2", "]"}], "]"}], ",", 
-            RowBox[{"#", "[", 
-             RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "&"}], "/@", 
-         RowBox[{
-          RowBox[{"ColorMapSuite", "[", "\"\<oslo\>\"", "]"}], "[", 
-          RowBox[{"[", 
-           RowBox[{"1", ",", "1"}], "]"}], "]"}]}]}]}], "}"}], ",", 
+         RowBox[{"Append", "[", 
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], ",", 
+           RowBox[{"#", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "&"}], "/@", 
+        RowBox[{
+         RowBox[{"ColorMapSuite", "[", "\"\<oslo\>\"", "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}]}], "}"}], ",", 
      "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{
@@ -459,12 +536,20 @@ Cell[BoxData[
                RowBox[{"ColorFunction", "\[Rule]", 
                 RowBox[{"(", 
                  RowBox[{
-                  RowBox[{"Blend", "[", 
-                   RowBox[{"cols", ",", 
+                  RowBox[{"If", "[", 
+                   RowBox[{
+                    RowBox[{"i", "==", 
+                    RowBox[{
+                    RowBox[{"Length", "[", "pts", "]"}], "+", "1"}]}], ",", 
+                    RowBox[{"cols", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"-", "1"}], "]"}], "]"}], ",", 
+                    RowBox[{"Blend", "[", 
+                    RowBox[{"cols", ",", 
                     RowBox[{"2", 
                     RowBox[{"(", 
-                    RowBox[{"#3", "-", "t", "+", ".5"}], ")"}]}]}], "]"}], 
-                  "&"}], ")"}]}], ",", 
+                    RowBox[{"#3", "-", "t", "+", ".5"}], ")"}]}]}], "]"}]}], 
+                   "]"}], "&"}], ")"}]}], ",", 
                RowBox[{"ColorFunctionScaling", "\[Rule]", "False"}], ",", 
                RowBox[{"Axes", "->", "False"}], ",", 
                RowBox[{"PlotStyle", "\[Rule]", 
@@ -501,43 +586,58 @@ Cell[BoxData[
           SqrtBox["2"]}], "]"}], "70."]}], "]"}]}], "\[IndentingNewLine]", 
     "]"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.8813273811228447`*^9, 3.881327450070965*^9}, {
-  3.907622140943783*^9, 3.907622141241637*^9}, {3.907622210941181*^9, 
-  3.907622272691012*^9}},ExpressionUUID->"5fc43715-1e1f-4372-9f72-\
-c6fc3cf4a76e"],
+   3.907622140943783*^9, 3.907622141241637*^9}, {3.907622210941181*^9, 
+   3.907622272691012*^9}, 3.908377678548634*^9, 3.908380057457027*^9},
+ CellLabel->"In[39]:=",ExpressionUUID->"5fc43715-1e1f-4372-9f72-c6fc3cf4a76e"],
 
-Cell[CellGroupData[{
+Cell["Which we can export to a GIF:", "Text",
+ CellChangeTimes->{{3.908380113146881*^9, 
+  3.90838011776958*^9}},ExpressionUUID->"8e72d88a-8f7b-4954-adef-\
+68b892f0e6d7"],
 
 Cell[BoxData[
- RowBox[{"Export", "[", 
-  RowBox[{
+ RowBox[{
+  RowBox[{"Export", "[", 
    RowBox[{
-    RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-    "\"\<../images/flow.gif\>\""}], ",", "flow", ",", 
-   RowBox[{"\"\<AnimationRepetitions\>\"", "->", "Infinity"}], ",", 
-   RowBox[{"\"\<DisplayDurations\>\"", "->", 
-    RowBox[{"1", "/", "50"}]}]}], "]"}]], "Input",
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<flow.gif\>\""}], ",",
+     "flow", ",", 
+    RowBox[{"\"\<AnimationRepetitions\>\"", "->", "Infinity"}], ",", 
+    RowBox[{"\"\<DisplayDurations\>\"", "->", 
+     RowBox[{"1", "/", "50"}]}]}], "]"}], ";"}]], "Input",
  CellChangeTimes->{{3.881242601713378*^9, 3.881242622833569*^9}, {
-  3.881245356535289*^9, 3.8812453589639893`*^9}, {3.881252769213448*^9, 
-  3.8812527716117687`*^9}, {3.8812544711419697`*^9, 3.881254473483364*^9}, {
-  3.881254975638689*^9, 3.8812549775663157`*^9}, {3.8812550196195593`*^9, 
-  3.8812550218911743`*^9}, {3.881255915040683*^9, 3.881255917539617*^9}, {
-  3.881257043492899*^9, 3.881257045679064*^9}, {3.881257825147398*^9, 
-  3.881257827668778*^9}, {3.881258193744356*^9, 3.881258195903871*^9}, {
-  3.88125901589303*^9, 3.881259019851747*^9}, {3.881325664096943*^9, 
-  3.881325666044491*^9}, {3.88132742906355*^9, 3.8813274571750317`*^9}, {
-  3.907622144252721*^9, 3.907622146607358*^9}, {3.907622288415255*^9, 
-  3.907622289677395*^9}},
- CellLabel->"In[74]:=",ExpressionUUID->"f00b0bcc-30fd-4b99-ba8e-b8cec2376bdd"],
+   3.881245356535289*^9, 3.8812453589639893`*^9}, {3.881252769213448*^9, 
+   3.8812527716117687`*^9}, {3.8812544711419697`*^9, 3.881254473483364*^9}, {
+   3.881254975638689*^9, 3.8812549775663157`*^9}, {3.8812550196195593`*^9, 
+   3.8812550218911743`*^9}, {3.881255915040683*^9, 3.881255917539617*^9}, {
+   3.881257043492899*^9, 3.881257045679064*^9}, {3.881257825147398*^9, 
+   3.881257827668778*^9}, {3.881258193744356*^9, 3.881258195903871*^9}, {
+   3.88125901589303*^9, 3.881259019851747*^9}, {3.881325664096943*^9, 
+   3.881325666044491*^9}, {3.88132742906355*^9, 3.8813274571750317`*^9}, {
+   3.907622144252721*^9, 3.907622146607358*^9}, {3.907622288415255*^9, 
+   3.907622289677395*^9}, 3.908370363850912*^9, 
+   3.908379604525782*^9},ExpressionUUID->"f00b0bcc-30fd-4b99-ba8e-\
+b8cec2376bdd"],
 
-Cell[BoxData["\<\"/Users/shonk/Dropbox/Chord \
-Length/animations/source/../images/flow.gif\"\>"], "Output",
- CellChangeTimes->{3.9076223426373453`*^9},
- CellLabel->"Out[74]=",ExpressionUUID->"eda239a8-33e0-46f8-9869-149c613ee244"]
-}, Open  ]]
+Cell[TextData[{
+ "Or visualize directly in Mathematica using ",
+ StyleBox["ListAnimate", "Input"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.90838015605018*^9, 
+  3.908380156132577*^9}},ExpressionUUID->"d0a53bff-e9a3-4eed-80aa-\
+403efc419124"],
+
+Cell[BoxData[
+ RowBox[{"ListAnimate", "[", 
+  RowBox[{"flow", ",", "50"}], "]"}]], "Input",
+ CellChangeTimes->{{3.908377722462585*^9, 3.908377724575914*^9}, {
+  3.9083778126819773`*^9, 3.908377813104023*^9}},
+ CellLabel->"In[43]:=",ExpressionUUID->"55adff59-c4f0-49b4-bdeb-089e5a157bf4"]
 }, Open  ]]
 },
 WindowSize->{1155, 1089},
-WindowMargins->{{572, Automatic}, {Automatic, 60}},
+WindowMargins->{{177, Automatic}, {Automatic, 68}},
 FrontEndVersion->"13.2 for Mac OS X ARM (64-bit) (January 30, 2023)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"74dfbfef-eda1-4a0c-8fe8-4d869fcd5d73"
@@ -555,23 +655,26 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 157, 3, 98, "Title",ExpressionUUID->"6d7c5af9-b9df-456a-8ea9-85d537660ac1"],
-Cell[740, 27, 1126, 29, 35, "Text",ExpressionUUID->"e999453d-84a2-49a3-9b89-a5eac0ce8ed1"],
-Cell[1869, 58, 4887, 128, 195, "Text",ExpressionUUID->"848196dd-77a9-4df7-a193-050f06d62248"],
-Cell[6759, 188, 1498, 39, 81, "Text",ExpressionUUID->"bb1e2ed4-d1f7-4270-b815-c6c210efdb6f"],
-Cell[8260, 229, 411, 12, 35, "Text",ExpressionUUID->"f164d21c-19e5-4c91-8703-ba3dbfec0f50"],
-Cell[8674, 243, 834, 21, 68, "Input",ExpressionUUID->"25b953c5-d5e2-4a0a-83f7-345593ee8245",
+Cell[740, 27, 377, 11, 35, "Text",ExpressionUUID->"86907579-b9da-4b54-abe9-1e15819bf6b2"],
+Cell[1120, 40, 521, 13, 35, "Text",ExpressionUUID->"f0e668b0-b986-4014-aa5f-5c1fc3cbd543"],
+Cell[1644, 55, 1683, 46, 35, "Text",ExpressionUUID->"e999453d-84a2-49a3-9b89-a5eac0ce8ed1"],
+Cell[3330, 103, 4447, 112, 195, "Text",ExpressionUUID->"848196dd-77a9-4df7-a193-050f06d62248"],
+Cell[7780, 217, 1498, 39, 81, "Text",ExpressionUUID->"bb1e2ed4-d1f7-4270-b815-c6c210efdb6f"],
+Cell[9281, 258, 498, 12, 35, "Text",ExpressionUUID->"f164d21c-19e5-4c91-8703-ba3dbfec0f50"],
+Cell[9782, 272, 1567, 42, 131, "Input",ExpressionUUID->"50cfb30e-1d7d-41e1-a275-4edeb50e3261",
  InitializationCell->True],
-Cell[9511, 266, 2248, 74, 146, "Input",ExpressionUUID->"54f81b06-021e-4341-868d-8ded93f0b264",
+Cell[11352, 316, 1600, 53, 86, "Text",ExpressionUUID->"9b5b01a1-ef0e-46ad-b255-bd7a3b52d286"],
+Cell[12955, 371, 2248, 74, 146, "Input",ExpressionUUID->"54f81b06-021e-4341-868d-8ded93f0b264",
  InitializationCell->True],
-Cell[11762, 342, 1010, 22, 46, "Input",ExpressionUUID->"0d39cdd7-387c-4c75-8ae9-448ca66466b7",
+Cell[15206, 447, 356, 7, 58, "Text",ExpressionUUID->"148aceb5-0879-4536-a0ed-87807fc9c668"],
+Cell[15565, 456, 1010, 22, 46, "Input",ExpressionUUID->"0d39cdd7-387c-4c75-8ae9-448ca66466b7",
  InitializationCell->True],
-Cell[12775, 366, 1587, 40, 49, "Input",ExpressionUUID->"bc61e88e-1f18-4827-a731-25cac118db7e",
- InitializationCell->True],
-Cell[14365, 408, 3848, 97, 304, "Input",ExpressionUUID->"5fc43715-1e1f-4372-9f72-c6fc3cf4a76e"],
-Cell[CellGroupData[{
-Cell[18238, 509, 1165, 20, 30, "Input",ExpressionUUID->"f00b0bcc-30fd-4b99-ba8e-b8cec2376bdd"],
-Cell[19406, 531, 230, 3, 34, "Output",ExpressionUUID->"eda239a8-33e0-46f8-9869-149c613ee244"]
-}, Open  ]]
+Cell[16578, 480, 194, 3, 35, "Text",ExpressionUUID->"11a6f243-aea1-4a5e-9806-5331fcf9bfb6"],
+Cell[16775, 485, 4165, 102, 304, "Input",ExpressionUUID->"5fc43715-1e1f-4372-9f72-c6fc3cf4a76e"],
+Cell[20943, 589, 170, 3, 35, "Text",ExpressionUUID->"8e72d88a-8f7b-4954-adef-68b892f0e6d7"],
+Cell[21116, 594, 1215, 22, 30, "Input",ExpressionUUID->"f00b0bcc-30fd-4b99-ba8e-b8cec2376bdd"],
+Cell[22334, 618, 240, 7, 35, "Text",ExpressionUUID->"d0a53bff-e9a3-4eed-80aa-403efc419124"],
+Cell[22577, 627, 287, 5, 30, "Input",ExpressionUUID->"55adff59-c4f0-49b4-bdeb-089e5a157bf4"]
 }, Open  ]]
 }
 ]
