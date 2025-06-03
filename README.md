@@ -11,7 +11,8 @@ Index
 * Modular Flow — [GIF](https://images.squarespace-cdn.com/content/v1/559ecd75e4b04a42423a0fe2/1716580563322-F3TRA7GN8JPZ7ZJ7VD3C/image-asset.gif), [source](source/flow.nb)
 * ℘′ — [GIF](https://images.squarespace-cdn.com/content/v1/559ecd75e4b04a42423a0fe2/1716580840132-AMCDO45802WVWL5J41YW/image-asset.gif), [source](source/p.nb)
 * Phase — [GIF](https://images.squarespace-cdn.com/content/v1/559ecd75e4b04a42423a0fe2/1747935280867-O0B2VPOKFL1EAQ1FC2Y4/image-asset.gif), [source](source/phase.nb)
+* Parallels — [GIF](https://images.squarespace-cdn.com/content/v1/559ecd75e4b04a42423a0fe2/1748967192818-KUFKUOP8XSBGDRLGX49J/horo16s.gif), [source](source/parallels.nb)
 
 [The GIFs on one page](https://shonkwiler.org/geometry).
 
-This work is partially supported by NSF [DMS–2107700](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2107700).
+Some of this work was supported by NSF [DMS–2107700](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2107700).
