@@ -12,6 +12,7 @@ Index
 * ℘′ — [GIF](https://images.squarespace-cdn.com/content/v1/559ecd75e4b04a42423a0fe2/1716580840132-AMCDO45802WVWL5J41YW/image-asset.gif), [source](source/p.nb)
 * Phase — [GIF](https://images.squarespace-cdn.com/content/v1/559ecd75e4b04a42423a0fe2/1747935280867-O0B2VPOKFL1EAQ1FC2Y4/image-asset.gif), [source](source/phase.nb)
 * Parallels — [GIF](https://images.squarespace-cdn.com/content/v1/559ecd75e4b04a42423a0fe2/1748967192818-KUFKUOP8XSBGDRLGX49J/horo16s.gif), [source](source/parallels.nb)
+* + — [GIF](https://images.squarespace-cdn.com/content/v1/559ecd75e4b04a42423a0fe2/1749228184092-7S6LX6X7A1LH0ASGYIAP/image-asset.gif), [source](source/plus.nb)
 
 [The GIFs on one page](https://shonkwiler.org/geometry).
 
