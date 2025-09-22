@@ -16,4 +16,4 @@ Index
 
 [The GIFs on one page](https://shonkwiler.org/geometry).
 
-Some of this work was supported by NSF [DMS–2107700](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2107700).
+Some of this work was supported by NSF [DMS–2107700](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2107700). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author and do not necessarily reflect the views of the National Science Foundation.
