@@ -13,7 +13,8 @@ Index
 * Phase — [GIF](https://images.squarespace-cdn.com/content/v1/559ecd75e4b04a42423a0fe2/1747935280867-O0B2VPOKFL1EAQ1FC2Y4/image-asset.gif), [source](source/phase.nb)
 * Parallels — [GIF](https://images.squarespace-cdn.com/content/v1/559ecd75e4b04a42423a0fe2/1748967192818-KUFKUOP8XSBGDRLGX49J/horo16s.gif), [source](source/parallels.nb)
 * &plus; — [GIF](https://images.squarespace-cdn.com/content/v1/559ecd75e4b04a42423a0fe2/1749228184092-7S6LX6X7A1LH0ASGYIAP/image-asset.gif), [source](source/plus.nb)
-* Quasi — [GIF](https://images.squarespace-cdn.com/content/v1/559ecd75e4b04a42423a0fe2/1781564540248-5ENL9M5DF30YF21CR1BC/image-asset.gif?format=1500w), [source](source/quasi.nb)
+* Quasi — [GIF](https://images.squarespace-cdn.com/content/v1/559ecd75e4b04a42423a0fe2/1781564540248-5ENL9M5DF30YF21CR1BC/image-asset.gif), [source](source/quasi.nb)
+* cn – [GIF](https://images.squarespace-cdn.com/content/v1/559ecd75e4b04a42423a0fe2/1782251308444-RSHWJU3PPK1GD73FKND4/image-asset.gif), [source](source/cn.nb)
 
 [The GIFs on one page](https://shonkwiler.org/geometry).
 
