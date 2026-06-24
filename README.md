@@ -18,4 +18,8 @@ Index
 
 [The GIFs on one page](https://shonkwiler.org/geometry).
 
+The mathematics behind _Modular Flow_, _Phase_, _Quasi_, and _cn_ are explained in the following paper:
+
+* Clayton Shonkwiler. [Looping animations using the modular flow and elliptic functions](https://archive.bridgesmathart.org/2026/bridges2026-533.html). In Martin Skrodzki, Kerry Mitchell, Katherine Seaton, and Eve Torrence, editors, _Proceedings of Bridges 2026: Mathematics and the Arts_, pages 533–536. Tessellations Publishing, Phoenix, AZ, USA, 2026.
+
 Some of this work was supported by NSF [DMS–2107700](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2107700). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author and do not necessarily reflect the views of the National Science Foundation.
